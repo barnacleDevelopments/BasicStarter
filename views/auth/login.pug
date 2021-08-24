@@ -1,0 +1,16 @@
+extends ../shared/layout.pug
+block head 
+    link(rel="stylesheet", href="/css/auth.css")
+
+block content
+    div#login-form.main-component
+        h1= "Login"
+        form(action="/login" method="POST") 
+            input#email-input(name="email" type="text" placeholder="example@domain.com")
+            input#password-input(name="password" type="password" placeholder="Password...")
+            div(class="btn-group")
+                input#login-btn.reg-btn-sm.btn.primary( type="submit", value="login")
+        a(href="/recovery")="Forgot password?"
+        p#error-message.text.error=errorMessage
+block foot
+    script(src="/js/ui/validation/login_validation.js", type="module") 

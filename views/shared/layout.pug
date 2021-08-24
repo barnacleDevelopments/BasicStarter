@@ -1,0 +1,55 @@
+doctype
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        title BasicAuth
+        <script src="https://kit.fontawesome.com/2cea744347.js" crossorigin="anonymous"></script>
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet")
+        link(rel="icon", href="/img/logo_3.png", type="image/x-icon")
+        link(rel="stylesheet", type='text/css', href="/css/shared_styles/reset.css")
+        link(rel="stylesheet", type="text/css", href="/css/shared_styles/global.css")
+        link(rel="stylesheet", type='text/css', href="/css/shared_styles/layout.css")
+        link(rel="stylesheet", type='text/css', href="/css/shared_styles/navigation.css")
+        link(rel="stylesheet", type='text/css', href="/css/component_styles/button.css")
+        link(rel="stylesheet", type='text/css', href="/css/component_styles/dialog.css")
+        link(rel="stylesheet", type='text/css', href="/css/component_styles/error_popup.css")
+        block head  
+    body
+        navbar(class='navbar')
+            nav(class="main-nav")
+                a#nav-title(href="/")= "Basic Auth"
+                ul
+                    li
+                        a(href="/")= "Home"
+                    li
+                        a(href="/about")= "About"
+                    li
+                        a(href="/contact")= "Contact"
+                
+            
+                if userAuthenticated
+                        div#option-menu
+                            a(href="/")
+                                i.fas.fa-user
+                            div#option-menu-shadow(style="display:none")
+                            ul#option-menu-list(style="display:none")
+                                li                           
+                                    a(href="/settings")="settings"
+                                li
+                                    a(href="/logout")="logout"
+                else 
+                    ul
+                        li
+                            a(href="/login")= "Login"
+                        li
+                            a(href="/register")="Register"
+
+    div(class="container")
+        block content
+
+    footer
+    script(src="/js/ui/interaction/dropdown_menu.js", type="text/javascript") 
+    block foot
+   

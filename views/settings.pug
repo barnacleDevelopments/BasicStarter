@@ -1,0 +1,27 @@
+extends shared/layout.pug
+include ../mixins/toggle_btn.pug
+include ../mixins/expansion_menu.pug
+
+block head
+    link(rel="stylesheet", href="/css/view_styles/settings.css")
+    link(rel="stylesheet", href="/css/component_styles/expansion_list.css")
+
+block content
+  h1#settings-title="settings"
+  div.row#settings-list
+    +expansionMenu
+      li
+        a(href="/")="change email"
+      li
+        a.text.error.dialog-trigger(href="/delete-account")="delete account"  
+
+    div
+      span="Dark Mode"
+      +toggleBtn
+
+block foot
+    script(src="./js/view_specific/settings.js", type="module") 
+    script(src="./js/ui/interaction/toggle_button.js", type="text/javascript") 
+    script(src="./js/ui/interaction/expansion_list.js", type="text/javascript") 
+    script(src="./js/ui/interaction/dialog.js", type="module") 
+    

@@ -1,0 +1,50 @@
+/* GENERAL */
+
+html, body {
+    height: 100%;
+    font-family: 'B612', sans-serif;
+}
+
+
+/* APP COLORS */
+:root {
+    --primary: #F9A828;
+    --secondary: #07617D;
+    --main-component-background: #ececeb;
+    --main-component-shadow:rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    --error: #823329;
+}
+
+.btn.primary {
+    background-color: var(--primary);
+}
+
+.btn.secondary {
+    background-color: var(--secondary);
+}
+
+.btn.error {
+    background-color: var(--error);
+    color: #f5f5f5;
+}
+
+.text.error {
+    color: var(--error);
+}
+
+
+
+/* COMPONENT SPECIFIC */
+/* shadows */
+.main-component {
+    background-color: var(--main-component-background);
+    box-shadow: var(--main-component-shadow);
+    padding: 14px 18px;
+    border-radius: 4px;
+    height: min-content;
+}
+
+/* INLINE STYLES */
+b {
+    font-weight: bold;
+}

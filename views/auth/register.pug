@@ -1,0 +1,26 @@
+extends ../shared/layout.pug
+block head 
+    link(rel="stylesheet", href="/css/auth.css")
+
+block content
+    div#register-form.main-component()
+        h1= "register"
+        form(action="/register", method="POST") 
+            // EMAIL INPUT
+            input#register-email-field(name="email" type="text" placeholder="example@domain.com", onpaste="return false;", ondrop="return false;", autocomplete="off")
+            p#validation-message-email
+            
+            // PASSWORD INPUT
+            input.register-password-field(name="password" type="password" placeholder="Password", onpaste="return false;", ondrop="return false;", autocomplete="off")
+            
+            // REPEAT PASSWORD INPUT
+            input.register-password-field(type="password" placeholder="Repeat Password...", onpaste="return false;", ondrop="return false;", autocomplete="off")
+            
+            // VALIDATION MESSAGE
+            p#validation-message-password
+            
+            div.btn-group
+                input#submit-registration-btn.btn.primary(class="reg-btn-sm", type="submit", value="Register")
+            p#server-registration-error=errorMessage
+block foot
+      script(src="js/ui/validation/registration_validation.js", type="module") 

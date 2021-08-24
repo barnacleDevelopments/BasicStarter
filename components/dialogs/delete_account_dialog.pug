@@ -1,0 +1,5 @@
+div.dialog-menu
+  h1="Delete Account"
+  p Please enter your email (<b>#[=userEmail]</b>) and press delete account. This will also remove any information collected from you.
+  input#delete-account-email(placeholder="example@domain.com", onpaste="return false;", ondrop="return false;", autocomplete="off")
+  a#delete-account-btn.btn.reg-btn-sm.error(href="/")="Delete Account"

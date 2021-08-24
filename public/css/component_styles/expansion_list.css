@@ -1,0 +1,44 @@
+.expansion-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.expansion-trigger {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.expansion-list {
+  top:28.8px;
+  left: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 0px;
+  opacity: 0;
+  transition: all .1s ease-in-out;
+}
+
+.expansion-list > li {
+  display: none;
+}
+
+.expansion-list > li > a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.644);
+}
+
+.expansion-list.expanded {
+  height: min-content;
+  padding: 14px;
+  opacity: 1;
+}
+
+.expansion-list.expanded > li {
+  margin-bottom: 14px;
+  display: block;
+}
