@@ -2,7 +2,7 @@ doctype
 html(lang='en')
     head
         meta(charset='utf-8')
-        title BasicAuth
+        title BasicShop
         <script src="https://kit.fontawesome.com/2cea744347.js" crossorigin="anonymous"></script>
         link(rel="preconnect" href="https://fonts.googleapis.com")
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
@@ -19,7 +19,7 @@ html(lang='en')
     body
         navbar(class='navbar')
             nav(class="main-nav")
-                a#nav-title(href="/")= "Basic Auth"
+                a#nav-title(href="/")= "Basic Shop"
                 ul
                     li
                         a(href="/")= "Home"
@@ -27,7 +27,8 @@ html(lang='en')
                         a(href="/about")= "About"
                     li
                         a(href="/contact")= "Contact"
-                
+                    li
+                        a(href="/products")= "Products"
             
                 if userAuthenticated
                         div#option-menu

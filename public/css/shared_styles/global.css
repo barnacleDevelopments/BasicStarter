@@ -5,6 +5,10 @@ html, body {
     font-family: 'B612', sans-serif;
 }
 
+h1 {
+    font-size: 2.5em;
+}
+
 
 /* APP COLORS */
 :root {

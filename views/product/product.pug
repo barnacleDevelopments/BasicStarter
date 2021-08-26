@@ -1,0 +1,14 @@
+extends ../shared/layout.pug
+
+block head
+    //- link(rel="stylesheet", href="/css/view_styles/products.css")
+
+block content
+  h2= product.name
+  p= product.price
+  form(method="POST" action="/cart")
+    input(type="hidden", name="productId", value= product._id, )
+    input(type="hidden", name="quantity", value= 1, )
+    button(type="submit")= "Add To Cart"
+      
+block foot

@@ -1,0 +1,14 @@
+extends ../shared/layout.pug
+
+block head
+    link(rel="stylesheet", href="/css/view_styles/products.css")
+
+block content
+  h1="Products"
+  div.product-list
+    each product in products
+      div.product-item
+        h2= product.name
+        a(href=`/products/${product.id}`)= "View"
+      
+block foot

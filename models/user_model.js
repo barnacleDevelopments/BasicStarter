@@ -1,7 +1,7 @@
 /*
 AUTHOR: Devin Davis
-DATE: January 2st, 2021
-FILE: post_model.js
+DATE: July 27th, 2021
+FILE: user_model.js
 */
 
 import mongoose from 'mongoose';
@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
   },
   reset_password_token: String,
   reset_password_expires: String,
-});
+}, { timestamps: true });
 
 const handleE11000 = (error, res, next) => {
   if (error.name === 'MongoError' && error.code === 11000) {

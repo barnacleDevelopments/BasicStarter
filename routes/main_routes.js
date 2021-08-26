@@ -7,7 +7,6 @@ FILE: comment_routes.js
 // DEPENDENCIES
 import express from 'express';
 
-
 // MIDDLEWARE
 import isLoggedIn from '../middleware/is_logged_in.js';
 

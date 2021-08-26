@@ -1,0 +1,9 @@
+extends shared/layout.pug
+
+block content
+  ul 
+    each item in cart.items
+      li= item.product.name + '-' + item.quantity
+
+
+block foot

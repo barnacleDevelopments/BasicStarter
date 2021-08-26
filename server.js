@@ -19,6 +19,8 @@ import expressPino from 'express-pino-logger';
 import mainRoutes from './routes/main_routes.js';
 import authRoutes from './routes/auth_routes.js';
 import mailRoutes from './routes/mail_routes.js';
+import productRoutes from './routes/product_routes.js';
+import cartRoutes from './routes/cart_routes.js'
 
 const app = express();
 
@@ -82,6 +84,8 @@ app.use(helmet({
 // ROUTES
 app.use('/', authRoutes);
 app.use('/', mainRoutes);
+app.use('/', productRoutes);
+app.use('/', cartRoutes)
 app.use('/mail', mailRoutes);
 app.use('*', (req, res, next) => {
   const error = new Error('Not Found');
