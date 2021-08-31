@@ -1,6 +1,5 @@
 extends ../shared/layout.pug
 block head 
-    link(rel="stylesheet", href="/css/auth.css")
 
 block content
     div#recovery-form.main-component
@@ -9,7 +8,7 @@ block content
         form(action="/recovery" method="POST") 
             input#recovery-email-input(name="email" type="text" placeholder="email")
             div(class="btn-group")
-                input#submit-recovery-btn.reg-btn-sm.btn.primary(class="", type="submit", value="recover password")
-            p#error-message.error.text=errorMessage    
+                input#submit-recovery-btn.primary-btn(class="", type="submit", value="recover password")
+            p#error-message=errorMessage    
 block foot
         script(src="js/ui/validation/password_reset_request_validation.js", type='module') 

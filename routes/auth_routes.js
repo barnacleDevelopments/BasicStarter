@@ -160,8 +160,6 @@ router.post('/register', (req, res, next) => {
       if (err) {
         return next(loginErr);
       }
-
-      return res.redirect('/');
     });
 
     return res.redirect('/');

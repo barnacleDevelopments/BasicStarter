@@ -1,22 +1,22 @@
 extends shared/layout.pug
 
 block head
-    link(rel="stylesheet", href="/css/view_styles/contact.css")
 
 block content
-    div.row 
-        div.col.sm5#contact-message.main-component 
+    div.row
+        div.col.sm5#contact-message.leaf
             h1="Thank you!" 
             p="We would love to hear from you. Please send us an email and we will be with you shortly. "
 
-        div.col.sm7#contact-form.main-component
+        div.col.sm7
+           div.leaf
             h1= "Contact"
             form(action="/mail", method="POST") 
                 input(class="contact-form-field", type="text", placeholder="Subject")
                 input(class="contact-form-field", type="text", placeholder="Email")
                 textarea(class="contact-form-field", name="content", value="content", cols="30", rows="10", placeholder="Content") 
                 div(class="btn-group")
-                    input#send-mail-btn.reg-btn-sm.btn.primary(class="reg-btn-sm" type="submit", value="send")
+                    input#send-mail-btn.primary-btn(class="reg-btn-sm" type="submit", value="send")
 block foot
     script(src="./js/mail_script.js") 
 

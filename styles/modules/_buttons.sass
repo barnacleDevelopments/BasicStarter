@@ -1,0 +1,29 @@
+// MIXINS
+%btn
+  border: none
+  padding: 12px 20px
+  text-transform: uppercase
+  border-radius: 4px
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px
+  text-decoration: none
+  color: #f5f5f5
+  font-weight: bold
+  font-size: 1.010em
+
+// BUTTONS
+.primary-btn
+  @extend %btn
+  background-color: $orange
+
+.secondary-btn
+  @extend %btn
+  background-color: $grey
+
+.btn-group
+  width: 100%
+  margin-top: 14px
+  display: flex
+  justify-content: flex-end
+
+  & a:nth-of-type(2)
+    margin-left: 14px

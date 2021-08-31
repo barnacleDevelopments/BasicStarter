@@ -1,10 +1,8 @@
 extends shared/layout.pug
-include ../mixins/toggle_btn.pug
-include ../mixins/expansion_menu.pug
+include ./mixins/toggle_btn.pug
+include ./mixins/expansion_menu.pug
 
 block head
-    link(rel="stylesheet", href="/css/view_styles/settings.css")
-    link(rel="stylesheet", href="/css/component_styles/expansion_list.css")
 
 block content
   h1#settings-title="settings"
@@ -13,7 +11,7 @@ block content
       li
         a(href="/")="change email"
       li
-        a.text.error.dialog-trigger(href="/delete-account")="delete account"  
+        a.dialog-trigger(href="/delete-account")="delete account"  
 
     div
       span="Dark Mode"

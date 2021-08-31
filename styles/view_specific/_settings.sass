@@ -1,0 +1,60 @@
+#settings-title
+  font-size: 2.5em
+  margin: 10px 0px 40px 0px
+  text-transform: capitalize
+  font-weight: 400
+
+#settings-list
+  flex-direction: column
+  padding-left: 14px
+
+
+  & span
+    font-size: 1.1em
+    font-weight: 400
+
+
+  & i
+    font-size: 1.8em
+    color: #949494
+
+
+  & > div
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 10px
+    padding: 10px 0px 0px 0px
+
+.arrow-dropdown
+  width: 60px
+  display: flex
+  justify-content: center
+  text-decoration: none
+
+.toggle-btn
+  display: flex
+  width: 60px
+  height: 30px
+  align-items: center
+  border: none
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px
+  border-radius: 3px
+
+
+  & div
+    height: 23px
+    width: 23px
+    background-color: #949494
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px
+    border-radius: 2px
+    justify-content: flex-start
+    transition: justify-content .3s
+
+
+  &.active
+    justify-content: flex-end
+
+
+  &.active div
+    background-color: #f9a828

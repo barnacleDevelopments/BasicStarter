@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "start": "nodemon server.js",
-    "dev": "nodemon app.js",
-    "debug": "LOG_LEVEL=debug nodemon server.js | ./node_modules/.bin/pino-pretty"
+    "dev": "concurrently npm:watch:*",
+    "watch:node": "NODE_ENV=development LOG_LEVEL=debug nodemon server.js | ./node_modules/.bin/pino-pretty",
+    "watch:sass": "sass --watch styles/index.sass public/css/index.css"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -32,6 +33,7 @@
     "renovate": "^25.59.1"
   },
   "devDependencies": {
+    "concurrently": "^6.2.1",
     "eslint": "^7.31.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.23.4",
